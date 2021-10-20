@@ -5,7 +5,7 @@ export default function App() {
   useEffect(() => {
     const apiKey = process.env.REACT_APP_VIDEOSDK_API_KEY;
     const meetingId = "milkyway";
-    const name = "Demo User";
+    const name = "Demo User 1";
 
     const config = {
       name: name,
@@ -35,18 +35,19 @@ export default function App() {
       brandingEnabled: true,
       brandLogoURL: "https://picsum.photos/200",
       brandName: "Awesome startup",
+      poweredBy: false,
 
       participantCanLeave: true, // if false, leave button won't be visible
 
-      livestream: {
-        autoStart: true,
-        outputs: [
-          // {
-          //   url: "rtmp://x.rtmp.youtube.com/live2",
-          //   streamKey: "<STREAM KEY FROM YOUTUBE>",
-          // },
-        ],
-      },
+      // livestream: {
+      //   autoStart: true,
+      //   outputs: [
+      //     // {
+      //     //   url: "rtmp://x.rtmp.youtube.com/live2",
+      //     //   streamKey: "<STREAM KEY FROM YOUTUBE>",
+      //     // },
+      //   ],
+      // },
 
       permissions: {
         askToJoin: false, // Ask joined participants for entry in meeting
