@@ -5,7 +5,7 @@ export default function App() {
   useEffect(() => {
     const apiKey = process.env.REACT_APP_VIDEOSDK_API_KEY;
     const meetingId = "milkyway";
-    const name = "Demo User 1";
+    const name = "Demo User";
 
     const config = {
       name: name,
@@ -50,7 +50,7 @@ export default function App() {
       // },
 
       permissions: {
-        askToJoin: false, // Ask joined participants for entry in meeting
+        askToJoin: window.location.pathname !== "/" ? true : false, // Ask joined participants for entry in meeting
         toggleParticipantMic: true, // Can toggle other participant's mic
         toggleParticipantWebcam: true, // Can toggle other participant's webcam
       },
